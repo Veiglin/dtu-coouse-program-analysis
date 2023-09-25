@@ -61,7 +61,7 @@ def test_identity():
     assert run_interpreter(byte_codes['identity'], locals=[test_int]) == test_int
 
 @pytest.mark.parametrize("byte_code_name, operation", [
-    ("add", lambda x, y: x + y),
+    ("sub", lambda x, y: x - y),
     ("min", min),
 ])
 def test_binary_operations(byte_code_name, operation):
